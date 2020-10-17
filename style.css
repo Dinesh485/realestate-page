@@ -1,0 +1,215 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+.filters {
+  padding: 30px;
+  background: whitesmoke;
+  position: relative;
+}
+
+.filters .title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.filters .filter {
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.295);
+}
+
+.filters .property-type .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.filters .property-type input[type=radio] {
+  display: none;
+}
+
+.filters .property-type label {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: white;
+  display: block;
+  margin: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.filters .property-type input:checked + label {
+  border: 1px solid blue;
+  background: rgba(0, 132, 255, 0.068);
+  color: blue;
+}
+
+.filters .price-range .title {
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.filters .price-range .title .values {
+  font-size: .9rem;
+  color: blue;
+}
+
+.filters .beds .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.filters .beds input[type=radio] {
+  display: none;
+}
+
+.filters .beds label {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: white;
+  display: block;
+  margin: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.filters .beds input:checked + label {
+  border: 1px solid blue;
+  background: rgba(0, 132, 255, 0.068);
+  color: blue;
+}
+
+.filters .property-size .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.filters .property-size .title .size {
+  font-size: 0.9rem;
+  color: blue;
+}
+
+.filters .furnished .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.filters .furnished input[type=radio] {
+  display: none;
+}
+
+.filters .furnished label {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: white;
+  display: block;
+  margin: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.filters .furnished input:checked + label {
+  border: 1px solid blue;
+  background: rgba(0, 132, 255, 0.068);
+  color: blue;
+}
+
+.filters .amenities .options label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px 0;
+  color: #525252;
+}
+
+.filters .amenities .options label i {
+  font-size: .7rem;
+  color: whitesmoke;
+  padding: 3px;
+  border-radius: 3px;
+  border: 1px solid gray;
+}
+
+.filters .amenities .options label input {
+  opacity: 0;
+  position: absolute;
+}
+
+.filters .amenities .options label input:checked + i {
+  background: blue;
+}
+
+.filters .btns {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  z-index: 10;
+}
+
+.filters .btns button {
+  padding: 10px 25px;
+  font-size: 1rem;
+  margin: 0 10px;
+  border-radius: 10px;
+  color: blue;
+  border: 1px solid blue;
+  background: rgba(2, 72, 224, 0.295);
+}
+
+.filters .btns button:first-child {
+  background: blue;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
