@@ -2,7 +2,7 @@ let priceRange = $(".price-slider")[0];
 let minvalue = $('.values .min')[0];
 let maxvalue = $(".values .max")[0];
 let sizeRange = $('.size-slider')[0];
-let sqrft = $('.sqrft')[0];
+let sqrft = $('.filters .sqrft')[0];
 let resetBtn = $('.resetbtn');
 
 noUiSlider.create(priceRange, {
@@ -42,3 +42,14 @@ resetBtn.on('click', () => {
   })
 })
 
+$(document).ready(() => {
+  $('.filter-btn').on("click", () => {
+    $('.filters').toggleClass('filters-up');
+  });
+  $('.filters .btns button[type = submit]').on('click', (e) => {
+    e.preventDefault();
+    $('.filters').toggleClass('filters-up')
+  });
+  
+
+})
