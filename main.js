@@ -1,23 +1,63 @@
-let priceRange = $(".price-slider")[0];
-let minvalue = $('.values .min')[0];
-let maxvalue = $(".values .max")[0];
+let priceRange = $(".price-slider")[0]; //we need this price range 
+let minvalue = $('.price-range .values .min')[0];//this one
+let maxvalue = $(".price-range .values .max")[0];//this one
 let sizeRange = $('.size-slider')[0];
-let sqrft = $('.filters .sqrft')[0];
+let sqrft = $('.filters .sqrft')[0]; 
 let resetBtn = $('.resetbtn');
 
+
+// ************** copy every thing below till the comment *****************
+const urlParams = new URLSearchParams(window.location.search)
+  let minParam = urlParams.get('min')
+  let maxParam = urlParams.get('max')
+   
+
+let minPrice = priceRange.getAttribute('data-min')
+let maxPrice = priceRange.getAttribute('data-max')
+
+
+const getParams = () =>{
+  if(minParam && maxParam){
+    return [minParam, maxParam]
+  }else{
+    return [minPrice , maxPrice]
+  }
+}
+
+
 noUiSlider.create(priceRange, {
-  start: [20, 100],
+   
+  start: getParams(),
   connect: true,
   range: {
-    min: 10,
-    max: 150,
+    min: parseInt(minPrice),
+    max: parseInt(maxPrice),
   }
 })
 
+let timeout;
 priceRange.noUiSlider.on('update', (values, handle) => {
+  
   minvalue.innerHTML = Math.floor(values[0]);
    maxvalue.innerHTML = Math.floor(values[1]);
+   clearTimeout(timeout);
+    
   })
+
+  priceRange.noUiSlider.on('set', (values, handle) =>{
+    const parmaString = `min=${ Math.floor(values[0])}&max=${Math.floor(values[1])}`
+    const urlParams = new URLSearchParams(parmaString)
+     
+     
+     timeout = setTimeout(() =>{
+       window.location = location.protocol+ '//' + location.host + location.pathname + "?" + urlParams.toString()
+     },[1000])
+  })
+ 
+  //******************************** till here *********************** */
+
+
+
 
 noUiSlider.create(sizeRange, {
   start: 50,

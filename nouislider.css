@@ -91,6 +91,7 @@
   height: 4px;
 }
 .noUi-horizontal .noUi-handle {
+  /* adjust these values to change the size and position of the slider handles */
   width: 28px;
   height: 28px;
   right: -17px;
@@ -114,7 +115,7 @@
  * Giving the connect element a border radius causes issues with using transform: scale
  */
 .noUi-target {
-  background: #4e6eff33;
+  background: #85858533;
 
 
  
@@ -123,7 +124,8 @@
   border-radius: 3px;
 }
 .noUi-connect {
-  background: blue;
+  /* change this to change color between sliders */
+  background: rgb(71, 71, 71);
 }
 /* Handles and cursors;
  */
@@ -134,7 +136,8 @@
   cursor: ns-resize;
 }
 .noUi-handle {
-  border: 2px solid blue;
+  /* change this to change color of the slider handles border */
+  border: 2px solid rgb(58, 58, 58);
   border-radius: 50%;
   background: white;
   cursor: default;
